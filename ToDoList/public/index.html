@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoList</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous">
+    </script>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+          
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </body>
+    </html>
+</head>
+<body>
+  <div class="header">
+    <div class="parents">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="logo">
+              <img src="./images/logoListTODO.png" alt="">
+            </div>
+          </div>
+          <!-- end col-2 -->
+          <div class="col-4">
+            
+          </div>
+          <div class="col-6">
+            <div class="items">
+              <div class="buttonAddWorkParent" style="display: none;">
+                <div class="buttonAddWorkChild"></div>
+                <div class="bg"></div>
+                <div class="form_add">
+                  <h3 class="title">Quick add task</h3>
+                    <input type="text" class="Write-work" name="" id="Write-work-child" >
+                    <span data-placeholder="Write a task and complete it !"></span>
+                    <button class="btn btn-info button-add"><p>ADD</p></button>
+                    <div class="btn date-time"><span>Schedule</span></div>
+                </div>
+              </div>
+              <div class="setting"  style="display: none;"></div>
+              <div class="user"  style="display: none;">
+                  <div class="btn-info-user"></div>
+                  <div class="info-user"></div>
+              </div>
+              <div class="logout"  style="display: none;">
+                  <p>LogOut</p>
+              </div>
+              <div class="login"  style="display: none;">
+                  <p>LogIn</p>
+              </div>
+              <div class="signup"  style="display: none;">
+                <p>Sign Up</p>
+              </div>
+              <div class="barMenu" style="display: none;" ></div>
+            </div>
+          </div>
+          <!-- end col-4 -->
+        </div>
+        
+        <!-- end logo -->
+
+        <!-- end item -->
+      </div>
+      <!-- end container   -->
+    </div>
+  </div>
+  <!-- end header -->
+  <div class="main">
+    <div class="topMain">
+      <div class="contentLeft" style="display: none;">
+        <div class="wrapper" >
+          <div class="btnClose"></div>
+          <div class="buttonToday">
+            <p class="ToDayWork">Today</p>
+          </div>
+          <div class="buttonNextDay">
+            <p class="NextDayWork">Next 7 days</p>
+          </div>
+          <div class="buttonAddProject">
+            <p class="addProject">Projects</p>
+            <div class="Projects">
+              <div class="_1project">
+                <p class="nameProject">Vũ Thanh Hiếu</p>
+              </div>
+              <div class="_1project">
+                <p class="nameProject">Vũ Thanh Hiếu</p>
+              </div>
+              <div class="_1project">
+                <p class="nameProject">Vũ Thanh Hiếu</p>
+              </div>
+              <div class="_1project">
+                <p class="nameProject">Vũ Thanh Hiếu</p>
+              </div>
+              <div class="writeProject">
+                <p class="buttonAdd">Add Project</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- clock -->
+        <div class="clock-date">
+          <div class="clock">
+              <div class="hour">
+                <div class="hr" id="hr"></div>
+              </div>
+              <div class="minute">
+                <div class="mn" id="mn"></div>
+              </div>
+              <div class="second">
+                <div class="sc" id="sc"></div>
+              </div>
+            </div>
+            <!-- day/month/year -->
+            <div class="date">
+              
+            </div>
+          </div>
+      </div>  
+      <div class="contentCenter">
+        <div class="listToDo" style="display: none;">
+            <div class="title">
+                <h2>ToDoList</h2>
+            </div>
+            <div class="addWork">
+              <!-- <form id="work-form"> -->
+                <input type="text" class="Write-work" name="" id="Write-work" >
+                <span data-placeholder="Write a task and complete it in today !"></span>
+                <button class="btn btn-info button-add"><p>Add Task</p></button>
+                <div class="important-parents">
+                  <div class="important">
+                    <div class="levels">
+                        <div class="level" data-important="1"></div>
+                        <div class="level" data-important="2"></div>
+                        <div class="level" data-important="3"></div>
+                        <div class="level" data-important="4"></div>
+                        <div class="level" data-important="5"></div>
+                      </div>
+                      <p id="textImportant" data-textImportant="Select task level "></p>
+                  </div>
+                </div>
+              <!-- </form> -->
+            </div>
+            <div class="list_work">
+              <div class="work-important">
+                
+              </div>
+              <div class="work-nomal">
+                
+              </div>
+              <div class="work-not-important">
+
+              </div>
+                <!-- <div class="_1work">
+                    <input type="checkbox" name="" id="">
+                    <p class="name_work">Make a website</p>
+                </div>-->
+            </div>
+            <!-- ens list-work -->
+            <div class="fooder">
+
+                <!-- <p class="all_Work"><span>4</span> task completed</p>-->
+
+            </div>
+          </div>
+          <!-- end list toDo -->
+      </div>
+    </div>
+    <!-- end topMain -->
+   
+    <!-- Login -->
+    <div class="login-account">
+        <div class="bg"></div>
+      <div class="content">
+        <h4>Sign In</h4>
+        <form id="login-form">
+          <div class="input">
+              <input type="email" id="login-email" requird />
+              <label class="label1" for="login-email">Email Address</label>
+          </div>
+          <div class="input">
+              <input type="password" id="login-password" requird />
+              <label class="label1" for="login-password">Your Password</label>
+          </div>
+          <button class="btn-login">Sign In</button>
+        </form>
+      </div>
+    </div>
+    <!-- end login -->
+    <!-- sign up -->
+    <div class="signup-account">
+      <div class="bg"></div>
+      <div class="content">
+        <h4>Sign Up</h4>
+        <form id="signup-form">
+          <div class="input">
+              <input type="text" id="name" requird />
+              <label class="label2" for="name">Your name</label>
+          </div>
+          <div class="input">
+              <input type="email" id="signup-email" requird />
+              <label class="label2" for="signup-email">Email Address</label>
+          </div>
+          <div class="input">
+              <input type="password" id="signup-password" requird />
+              <label class="label2" for="signup-password">Password</label>
+          </div>
+          <div class="input">
+              <input type="password" id="signup-cfpassword" requird />
+              <label class="label2" for="signup-cfpassword">Confirm Password</label>
+          </div>
+          <div class="input">
+              <input type="text" id="signup-phone" requird />
+              <label class="label2" for="signup-phone">Your Phone Number</label>
+          </div>
+          <button class="btn-signup">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <!-- end sign up -->
+    <!-- resport -->
+    <div class="resportWhenMissinfo" style="display: none;">
+      <!-- <div class="icon"></div> -->
+      <!-- <p data-notification = "You fill in the missing information!!!"></p> -->
+    </div>
+    <div class="reportTaskCompleted" style="display: none;">
+      <p>1 task completed</p>
+    </div>
+    <!-- get start -->
+    <div class="getstarted" style="display: none;">
+      <div class="bg-start"></div>
+      <div class="text">
+        <p>To Do List...</p>
+      </div>
+      <button class="create-user">Get Started</button>
+    </div>
+    <div class="using">
+      
+    </div>
+    <!-- language use -->
+    <div class="language" style="display: none;">
+      <div class="container">
+        <div class="card">
+          <div class="pesent">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="number">
+                <h2 class="count">20</h2>
+                <span>%</span>
+              </div>
+          </div>
+          <h4 class="text">Html</h4>
+        </div>
+        <!-- end card -->
+        <div class="card">
+          <div class="pesent">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="number">
+                <h2 class="count">25</h2>
+                <span>%</span>
+              </div>
+          </div>
+          <h4 class="text">Css</h4>
+        </div>
+        <!-- end card -->
+        <div class="card">
+          <div class="pesent">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="number">
+                <h2 class="count">45</h2>
+                <span>%</span>
+              </div>
+          </div>
+          <h4 class="text">Javascript</h4>
+        </div>
+        <!-- end card -->
+        <div class="card">
+          <div class="pesent">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="number">
+                <h2 class="count">10</h2>
+                <span>%</span>
+              </div>
+          </div>
+          <h4 class="text">Typescript</h4>
+        </div>
+        <!-- end card -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end language -->
+  </div>
+  <!-- end main -->  
+  </div>
+  <div class="fooderEndWeb">
+
+  </div>
+  <!-- end fooder -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="./myjs/Date_Time.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-functions.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBc0Bm7an6f5EzRCgNxzBE1IakKc4x9LjU",
+      authDomain: "coder-todolist-vn.firebaseapp.com",
+      databaseURL: "https://coder-todolist-vn.firebaseio.com",
+      projectId: "coder-todolist-vn",
+      storageBucket: "coder-todolist-vn.appspot.com",
+      messagingSenderId: "638163899197",
+      appId: "1:638163899197:web:0708cc3dc5ea8343bceb54",
+      measurementId: "G-G4BSRRPBS9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+    const functions = firebase.functions();
+  </script>
+  <script src="./myjs/index.js"></script>
+  <script src="./myjs/app.js"></script>
+  
+  <script src="./js/system.js"></script>
+  <script src="./js/effectBasic.js"></script>
+  <script type="text/javascript">
+		System.defaultJSExtensions = true;
+    System.import('./myjs/listtodo.js');
+	</script>
+</body>
+</html>

@@ -1,0 +1,1626 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+.using {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/use.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(0.8);
+}
+
+.important-child {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.resportWhenMissinfo {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1060;
+    width: 300px;
+    background: white;
+    height: 133px;
+    border-radius: 5px;
+    border: 1px #c0392b solid;
+    animation: 0.5s aniResportInfo forwards;
+    display: none;
+}
+
+.resportWhenMissinfo .icon {
+    width: 100px;
+    float: left;
+    background: url(../images/close.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    transform: scale(0.3) rotate(90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes aniResportInfo{
+    0%{
+        opacity: 0;
+        top: -500px;
+    }
+    30%{
+        left: 48%;
+        transform: translateX(-48%);
+        top: 100px;
+        opacity: 1;
+    }
+    40%{
+        left: 52%;
+        transform: translateX(-52%);
+        top: 100px;
+        opacity: 1;
+    }
+    50%{
+        left: 48%;
+        transform: translateX(-48%);
+        top: 100px;
+        opacity: 1;
+    }
+    60%{
+        left: 52%;
+        transform: translateX(-52%);
+        top: 100px;
+        opacity: 1;
+    }
+    70%{
+        left: 48%;
+        transform: translateX(-48%);
+        top: 100px;
+        opacity: 1;
+    }
+    80%{
+        left: 52%;
+        transform: translateX(-52%);
+        top: 100px;
+        opacity: 1;
+    }
+    90%{
+        left: 48%;
+        transform: translateX(-48%);
+        top: 100px;
+        opacity: 1;
+    }
+    100%{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+        opacity: 1;
+    }
+}
+.resportWhenMissinfo p {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: crimson;
+    font-size: 19px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-100%);
+}
+.resportWhenMissinfo p:before{
+    content: attr(data-notification);
+}
+
+.getstarted {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.getstarted .text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+    overflow: hidden;
+}
+
+
+.getstarted .bg-start {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/getstart.jpg);
+    /* z-index: -1; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: inherit;
+}
+
+.getstarted .text p {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Roboto;
+    color: white;
+    width: 200px;
+    text-align: center;
+    z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white; 
+    animation: type 3.5s steps(22) infinite;
+}
+@keyframes type{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 200px;
+    }
+}
+.getstarted .create-user {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-35%);
+    width: 150px;
+    height: 47px;
+    border: none;
+    background: #c0392b;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Roboto;
+    outline: none;
+    box-shadow: none;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+@keyframes btn_ani {
+    0%{
+        background: linear-gradient(45deg, #c0392b 15%, rgb(255, 255, 255) 25%, #c0392b 0%);
+    }
+    10%{
+        background: linear-gradient(45deg, #c0392b 25%, rgb(255, 255, 255) 35%, #c0392b 0%);
+    }
+    20%{
+        background: linear-gradient(45deg, #c0392b 35%, rgb(255, 255, 255) 45%, #c0392b 0%);
+    }
+    30%{
+        background: linear-gradient(45deg, #c0392b 45%, rgb(255, 255, 255) 55%, #c0392b 0%);
+    }
+    40%{
+        background: linear-gradient(45deg, #c0392b 55%, rgb(255, 255, 255) 65%, #c0392b 0%);
+    }
+    50%{
+        background: linear-gradient(45deg, #c0392b 65%, rgb(255, 255, 255) 75%, #c0392b 0%);
+    }
+    60%{
+        background: linear-gradient(45deg, #c0392b 80%, rgb(255, 255, 255) 95%, #c0392b 0%);
+    }
+    70%{
+        background: linear-gradient(45deg, #c0392b 65%, rgb(255, 255, 255) 75%, #c0392b 0%);
+    }
+    80%{
+        background: linear-gradient(45deg, #c0392b 45%, rgb(255, 255, 255) 55%, #c0392b 0%);
+    }
+    90%{
+        background: linear-gradient(45deg, #c0392b 25%, rgb(255, 255, 255) 35%, #c0392b 0%);
+    }
+    100%{
+        background: linear-gradient(45deg, #c0392b 10%, rgb(255, 255, 255) 15%, #c0392b 0%);
+    }
+}
+.getstarted .create-user:hover {
+    box-shadow: 0 0 10px #c0392b;
+    animation: btn_ani 1s infinite;
+}
+
+.reportTaskCompleted {
+    position: fixed;
+    /* top: 0; */
+    bottom: 10px;
+    z-index: 1050;
+    width: 180px;
+    height: 35px;
+    background: black;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: 0.6s ani_report forwards;
+}
+@-webkit-keyframes ani_report{
+    0%{
+        bottom: -300px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 10px;
+        opacity: 1;
+    }
+   
+}
+
+.reportTaskCompleted p {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-account, .signup-account {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -10%);
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.signup-account .bg,.login-account .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #00000059;
+    z-index: -1;
+}
+
+.login-account.show, .signup-account.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-account .content, .signup-account .content {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    background: white;
+    border: 5px solid #e9e9e9;
+    box-shadow: 0 0 4px #efecec;
+    border-radius: 10px;
+}
+
+.signup-account .content {
+    height: 570px;
+}
+
+.login-account .content h4, .signup-account .content h4 {
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 25px;
+    color: rebeccapurple;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.login-account .content #login-email, .login-account .content #login-password, .signup-account .content #signup-email, .signup-account .content #signup-password, .signup-account .content #signup-phone, .signup-account .content #name,.signup-account .content #signup-cfpassword {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #999999;
+    width: 100%;
+}
+
+.login-account .content label,.signup-account .content label {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    margin-bottom: 0!important;
+    color: gray;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.signup-account .content label.effect-top {
+    top: 0!important;
+}
+
+.login-account .content label.effect-top {
+    top: 0!important;
+}
+
+.login-account .content .input,.signup-account .content .input {
+    position: relative;
+    width: 85%;
+    margin: auto;
+    height: 60px;
+}
+
+.login-account .content .btn-login, .signup-account .content .btn-signup {
+    width: 85%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border: none;
+    height: 50px;
+    background: linear-gradient(45deg, #663399 20%,#f1c40f 20%,#9b59b6 30%);
+    color: white;
+    font-size: 22px;
+}
+
+.login-account .content .btn-login {
+    margin-top: 130px;
+}
+
+.login-account .content .btn-login:hover, .signup-account .content .btn-signup:hover {
+    background: linear-gradient(45deg, #9b59b6 20%,#f1c40f 20%,#663399 30%);
+}
+
+.btnClose {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: #f0f8ff00;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.btnClose:before {
+    content: "\f057";
+    font-family: "FontAwesome";
+    color: #e74c3c;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1040;
+}
+
+.buttonAddProject {
+    width: 100%;
+    height:100%;
+    position: relative;
+    padding-top: 10px;
+}
+
+.buttonAddProject .Projects {
+    width: 100%;
+    position: relative;
+    max-height: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 1030;
+}
+
+.buttonAddProject .Projects.show {
+    max-height: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.buttonAddProject .Projects ._1project p.nameProject:before {
+    content: ""!important;
+    background: #f1c40f!important;
+    width: 10px!important;
+    height: 10px!important;
+}
+
+.buttonAddProject .Projects ._1project {
+    padding-left: 5px;
+}
+
+
+.buttonAddProject .Projects .writeProject p.buttonAdd:before {
+    content: "\f0fe"!important;
+}
+
+.buttonAddProject .Projects .writeProject p.buttonAdd:hover:before {
+    color: rebeccapurple;
+}
+
+.buttonAddProject p.addProject,.buttonAddProject .Projects .writeProject p.buttonAdd {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 10px;
+}
+
+.buttonAddProject .Projects .writeProject p.buttonAdd {
+    font-size: 14px;
+}
+
+.buttonAddProject p.addProject {
+    border-bottom: 1px solid #e6e6e6;
+    transition: 0.4s;
+}
+
+.buttonAddProject .Projects .writeProject p.buttonAdd:hover {
+    background: #fefefeab;
+}
+
+.buttonAddProject p.addProject:after {
+    content: "\f054";
+    margin-left: auto;
+    margin-right: 20px;
+    font-family: "FontAwesome";
+    color: white;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.buttonAddProject p.addProject:hover:after {
+    transform: rotate(90deg);
+}
+.buttonAddProject p.addProject.show:after {
+    transform: rotate(90deg);
+}
+.buttonAddProject p.addProject:hover {
+    background: #d5d5d58a;
+}
+.buttonAddProject p.addProject.show {
+    background: #d5d5d58a;
+}
+
+.buttonAddProject p.addProject:before
+, .buttonAddProject .Projects ._1project p.nameProject:before
+,.buttonAddProject .Projects .writeProject p.buttonAdd:before {
+    font-family: "FontAwesome";
+    content: "\f067";
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+    background: #00ffff00;
+    display: flex;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.4s;
+    cursor: pointer;
+    padding-top: 4px;
+}
+
+.buttonAddProject p.addProject:hover:before {
+    background: #e74c3c;
+}
+.buttonAddProject p.addProject.show:before {
+    background: #e74c3c;
+}
+
+.contentLeft {
+    flex: 0 0 28.33%;
+    max-width: 28%;
+}
+
+.contentCenter {
+    max-width: 59.33%;
+    flex: 0 0 59.33%;
+}
+
+
+.clock {
+    width: 250px;
+    height: 250px;
+    background: white url(../images/clock.png);
+    background-size: contain;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 20px solid #ffffff;
+    box-shadow: inset 0 0 30px rgba(0,0,0,.1), 0 20px 20px rgba(0,0,0,.2), 0 0 0 4px rgba(255,255,255,1);
+}
+
+.clock .hour , .clock .minute ,.clock .second {
+    position: absolute;
+}
+
+.hour,.hr {
+    width: 120px;
+    height: 120px;
+}
+
+.minute, .mn {
+    width: 140px;
+    height: 140px;
+}
+
+.second, .sc {
+    width: 160px;
+    height: 160px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.clock .hr:before {
+    content: '';
+    width: 8px;
+    height: 60px;
+    background: #c8c8c7;
+    position: absolute;
+    top: 0;z-index: 10;
+}
+
+.clock .mn:before {
+    content: '';
+    width: 5px;
+    height: 70px;
+    background: #e8e8e8;
+    position: absolute;
+    top: 0;
+    z-index: 11;
+}
+
+.clock .sc:before {
+    content: '';
+    width: 3px;
+    height: 110px;
+    background: #e74c3c;
+    position: absolute;
+    top: 0px;
+    z-index: 15;
+}
+
+.clock:before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #b5b5b5;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.contentLeft .wrapper {
+    width: 60%;
+    margin-left: auto;
+}
+
+.contentLeft .clock-date {
+    position: relative;
+    padding-top: 20px;
+}
+
+.clock-date .date {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 100%;
+    padding-top: 12px;
+    color: #c0392b;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.contentLeft .wrapper .buttonToday
+, .contentLeft .wrapper .buttonNextDay
+, .buttonAddProject .Projects ._1project
+,.buttonAddProject .Projects .writeProject {
+    width: 100%;
+    background: #efefef;
+    height: 34px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contentLeft .wrapper .buttonToday p.ToDayWork
+, .contentLeft .wrapper .buttonNextDay p.NextDayWork
+,.buttonAddProject .Projects ._1project p.nameProject {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.buttonAddProject .Projects ._1project p.nameProject {
+    font-size: 14px;
+    font-weight: 500;
+}
+.contentLeft .wrapper .buttonToday p.ToDayWork:hover
+, .contentLeft .wrapper .buttonNextDay p.NextDayWork:hover
+,.buttonAddProject .Projects ._1project:hover{
+    background: white;
+}
+.contentLeft .wrapper .buttonToday p.ToDayWork.show
+, .contentLeft .wrapper .buttonNextDay p.NextDayWork.show,.buttonAddProject .Projects ._1project.show{
+    background: white;
+    font-weight: 600;
+}
+
+.contentLeft .wrapper .buttonToday p.ToDayWork:before
+,.contentLeft .wrapper .buttonNextDay p.NextDayWork:before {
+    content: "\f274";
+    font-family: "FontAwesome";
+    color: white;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+.contentLeft .wrapper .buttonToday p.ToDayWork.show:before
+, .contentLeft .wrapper .buttonNextDay p.NextDayWork.show:before {
+    color: #e74c3c;
+}
+.contentLeft .wrapper .buttonToday p.ToDayWork:hover:before
+, .contentLeft .wrapper .buttonNextDay p.NextDayWork:hover:before {
+    color: #e74c3c;
+}
+
+.contentLeft .wrapper .buttonNextDay p.NextDayWork:before {
+    content: "\f073";
+}
+
+.topMain {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main {
+    width: 100%;
+    background: #efefef;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+.header .parents .items {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .parents .items .buttonAddWorkParent
+, .header .parents .items .setting
+, .header .parents .items .barMenu
+, .parents .items .user {
+    width: 6%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #50505000;
+    transition: 0.4s;
+    margin: 0 5px;
+}
+
+.parents .items .logout, .parents .items .login
+, .parents .items .signup {
+    width: 80px;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #50505000;
+    transition: 0.4s;
+    margin: 0 5px;
+}
+
+.login p, .signup p , .logout p {
+    width: 100%;
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    border: white solid 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.parents .items .user .info-user {
+    position: absolute;
+    left: -193px;
+    top: 47px;
+    width: 300px;
+    height: auto;
+    z-index: 100;
+    background: white;
+    text-align: center;
+    box-shadow: 0 0 10px rebeccapurple;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.parents .items .btn-info-user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 46px;
+    background: #00ffff00;
+    z-index: 100;
+}
+
+.parents .items .btn-info-user:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 102;
+    background: #ff000000;
+}
+
+.parents .items .user .info-user.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.parents .items .user .info-user .img-user {
+    width: 100px;
+    height: 100px;
+    border: gainsboro solid;
+    margin: auto;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.parents .items .user .info-user .img-user .img-user-child {
+    background-image: url(../images/avatarUser.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: relative;
+}
+
+
+.parents .items .user .info-user .email-user {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.parents .items .user .info-user .email-user p {
+    display: inline;
+    width: auto;
+    text-align: center;
+    color:#767676;
+}
+
+.parents .items .user .info-user .email-user h4 {
+    font-size: 20px;
+    color:#767676;
+}
+
+.parents .items .user .info-user .email-user span {
+    display: block;
+    color: rebeccapurple;
+}
+
+.parents .items .user {
+    position: relative;
+}
+.header .parents .items .barMenu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header .parents .items .setting:hover
+,.header .parents .items .user:hover {
+    background: #80808057;
+}
+
+.header .parents .items .buttonAddWorkParent .buttonAddWorkChild {
+    width: 100%;
+    height: 100%;
+    background: #00ffff00;
+    transition: 0.4s;
+}
+
+.header .parents .items .buttonAddWorkParent .buttonAddWorkChild:hover {
+    background: #80808059;
+}
+
+.header .parents .items .buttonAddWorkParent .bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #0000009e;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.header .parents .items .buttonAddWorkParent .bg.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .parents .items .buttonAddWorkParent .form_add {
+    position: fixed;
+    top: 52px;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    background: #ffffff;
+    z-index: 1040;
+    border-radius: 8px;
+    box-shadow: 0 0 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: 0.4s;
+}
+.header .parents .items .buttonAddWorkParent .form_add.show{
+    opacity: 1;
+    visibility: visible;
+}
+.header .parents .items .buttonAddWorkParent .form_add h3.title {
+    position: absolute;
+    top: 10%;
+    font-size: 18px;
+    left: 1%;
+    transform: translateX(-1%) translateY(-10%);
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.header .parents .items .setting:before, 
+.header .parents .items .barMenu:before, 
+.header .parents .items .user:before{
+    content: "\f013";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "FontAwesome";
+}
+.header .parents .items .user:before {
+    content: "\f007";
+}
+
+.header .parents .items .barMenu:before {
+    content: "\f0c9";
+}
+
+.header .parents .items .buttonAddWorkChild:before {
+    content: "\f067";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #ffffff;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.header {
+    width: 100%;
+    height: 65px;
+}
+
+.header .parents {
+    background: #c0392b;
+    width: 100vw;
+    height: 100%;
+}
+
+.header .parents .container,
+.header .parents .container .row {
+    height: 100%!important;
+}
+
+.header .parents .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.header .parents .logo svg {
+    background: #a4ecbf;
+    height: auto;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    font-family: roboto!important;
+    overflow-x: hidden;
+}
+.listToDo{
+    width: 800px;
+    height: auto;
+    margin: auto;
+    background: rgb(255, 255, 255);
+    display: block;
+    border: 5px solid rgb(250, 250, 250);
+}
+
+.listToDo .title{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border:1px solid rgb(214, 214, 214);
+    box-shadow: 0 0 10px rgb(207, 207, 207);
+}
+.listToDo .addWork{
+    padding-top:50px;
+    width: 98%;
+    height: 100px;
+    margin:auto;
+    position: relative;
+}
+
+.listToDo .addWork .important-parents {
+    position: absolute;
+    top: 68%;
+    right: 0;
+}
+.listToDo .addWork .important-parents.animate{
+    animation: ani_important 0.3s forwards;
+}
+@keyframes ani_important {
+    0%{
+        transform: translateX(15px);
+    }
+    10%{
+        transform: translateX(-15px);
+    }
+    2%{
+        transform: translateX(15px);
+    }
+    30%{
+        transform: translateX(-15px);
+    }
+    40%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    60%{
+        transform: translateX(10px);
+    }
+    70%{
+        transform: translateX(-10px);
+    }
+    90%{
+        transform: translateX(8px);
+    }
+    80%{
+        transform: translateX(-8px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.listToDo .addWork #work-form {
+    width: 100%;
+    height: 100%;
+}
+
+.listToDo .addWork .button-add {
+    position: absolute;
+    top: 116px;
+    left: 0;
+    width: 100px;
+    height: 35px;
+    background: #e74c3c!important;
+    border: none!important;
+    outline: none!important;
+    border-radius: 0;
+    box-shadow: none!important;
+    transition: 0.4s;
+}
+
+.listToDo .addWork .button-add:hover {
+    box-shadow: 0 0 15px 2px #ad75e6!important;
+}
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
+
+.listToDo .addWork .button-add p {
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+.listToDo .addWork .Write-work
+,.header .parents .items .buttonAddWorkParent .form_add .Write-work{
+    width: 80%;
+    height: 100%;
+    border:none;
+    box-shadow: none;
+    outline: none;
+    background: white!important;
+    border-bottom: 3px solid #e74c3c;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+.listToDo .addWork .Write-work.animate{
+    animation: ani_important 0.3s forwards;
+}
+.header .parents .items .buttonAddWorkParent .form_add .Write-work {
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translate(-5%,-40%);
+    background: white;
+    border-bottom: 3px solid #e74c3c;
+    border-top: 3px solid #e74c3c;
+    border-left: 3px solid #e74c3c;
+}
+
+.header .parents .items .buttonAddWorkParent .form_add .button-add {
+    position: relative;
+    top: 90%;
+    left: 2%!important;
+    transform: translateY(-90%);
+    width: 80px;
+    height: 35px;
+    outline: #e6e6e6!important;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 2px #e6e6e6!important;
+    background: #e74c3c;
+}
+
+.header .parents .items .buttonAddWorkParent .form_add .date-time {
+    position: absolute;
+    background: white;
+    top: 40%;
+    right: 5px;
+    transform: translateY(-40%);
+    width: 106px;
+    border: none;
+    border-radius: 0;
+    height: 40px;
+    border-bottom: 3px solid #e74c3c;
+    border-top: 3px solid #e74c3c;
+    border-left: 3px solid #e74c3c;
+    border-right: 3px solid #e74c3c;
+}
+
+.header .parents .items .buttonAddWorkParent .form_add .date-time:hover {
+    box-shadow: 0 0 5px 2px #e74c3c;
+    outline: #e74c3c;
+}
+
+.header .parents .items .buttonAddWorkParent .form_add .date-time span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header .parents .items .buttonAddWorkParent .form_add .button-add:hover {
+    outline: #8b69ac!important;
+    box-shadow: 0 0 10px #8b69ac!important;
+}
+
+.header .parents .items .buttonAddWorkParent .form_add .button-add p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+}
+.addWork span {
+    color: rgb(104, 104, 104);
+    font-weight: 700;
+    display: flex;
+}
+.listToDo .addWork span:before{
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 68px;
+    transform: translateY(-63%);
+    left:0;
+    display:block;
+    z-index: 0;
+    transition: 0.4s;
+}
+.listToDo .addWork .focus + span:before{
+    top:45px;
+}
+.listToDo .title h2{
+    font-size: 36px;
+    color: #e74c3c;
+    font-weight: 600;
+}
+.listToDo .list_work{
+    width: 100%;
+    height: auto;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-top: 70px;
+}
+.listToDo .list_work ._1work{
+    border:1px solid white;
+    margin-top:10px;
+    padding-top:15px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.listToDo .list_work ._1work .checkbox-parents {
+    display: inline-block;
+    position: relative;
+    width: 19px;
+    height: 17px;
+}
+
+.listToDo .list_work ._1work p {
+    font-size: 15px;
+    font-weight: 500;
+}
+.listToDo .list_work ._1work input{
+    display:inline-block;
+    text-align:start;
+}
+
+.listToDo .list_work ._1work input.checkBox {
+    margin-left: 5px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.listToDo .list_work ._1work .checkmark {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    left: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px solid #c0392b;
+}
+
+.listToDo .list_work ._1work input:checked ~ .checkmark:after {
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    content:"";
+    height: 9px;
+    width: 6px;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.listToDo .list_work ._1work input:checked ~ .checkmark {
+    background: #008eff;
+}
+
+.listToDo .list_work ._1work p.name_work{
+    display:inline-block;
+    text-align:start;
+    font-weight: 500;
+    height: 100%;
+    width: 70%;
+    word-break: break-all;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #767676;
+    font-size: 16px;
+}
+
+.listToDo .list_work ._1work p.name_work.decoration {
+    text-decoration: line-through;
+}
+.important {
+    height: 100%;
+    position: relative;
+}
+
+.important .levels {
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.levels .level {
+    width: 24px;
+    height: 10px;
+    margin-right: 5px;
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+.level.draw-color3,.level.draw-color4 {
+    background: rgb(240, 147, 43);
+    border: 2px solid rgb(240, 147, 43);
+}
+
+.level.draw-color1,.level.draw-color2 {
+    background: rgb(249, 202, 36);
+    border: 2px solid rgb(249, 202, 36);
+}
+
+.level.draw-color0 {
+    background: rgb(246, 229, 141);
+    border: 2px solid rgb(246, 229, 141);
+}
+.important p{
+    position: absolute;
+    top: 13px;
+    left: 0;
+    bottom:0;
+    text-align: center;
+    width: 100%;
+    color: rgb(104, 104, 104);
+    font-size: 16px;
+    font-weight: 700;
+}
+.important p:before{
+    content: attr(data-textImportant);
+}
+.listToDo .fooder{
+    width: 98%;
+    height: 30px;
+    background: #c0392b;
+    box-shadow: 0 0 10px #c0392b;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+.listToDo .fooder p.all_Work{
+    width: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.listToDo .fooder p.all_Work span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.listToDo .fooder .finsh_Work{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.listToDo .fooder .finsh_Work .btn {
+    width: 150px;
+    height: 40px;
+    background: rebeccapurple!important;
+    border: none;
+    border-radius: 0;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.listToDo .fooder .finsh_Work .btn p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.listToDo .fooder .finsh_Work .btn:hover {
+    box-shadow: 0 0 10px #7948aa!important;
+}
+.listToDo .fooder .finsh_Work input{
+    display: inline;
+}
+
+.listToDo .fooder .finsh_Work p{
+    display: inline-block;
+    color: rgb(68, 68, 68);
+    font-size: 18px;
+    font-weight: 500;
+}
+/* language svg pesent */
+.language{
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+}
+.pesent{
+    position: relative;
+    margin: auto;
+}
+.pesent .number{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.pesent .number span {
+    color: rebeccapurple;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card .pesent .number span {
+    transition: 0.4s;
+    transform: scale(1) translateY(-5px) translateX(2px);
+}
+
+.card:hover .pesent .number span {
+    transform: scale(0.8) translateX(15px) translateY(5px);
+}
+.pesent .number h2{
+    font-size: 40px;
+    color:#663399;
+    font-weight: 600;
+    transform: scale(1);
+    transition: 0.4s;
+}
+.card:hover .pesent .number h2{
+    transform: scale(1.8);
+}
+.card h4.text{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    color:#663399;
+}
+.language .container{
+    display: flex;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    box-shadow: 0 0 10px 2px rgb(226, 226, 226);
+    cursor: pointer;
+    margin:10px 5px;
+    border:2px solid rgb(228, 228, 228)!important;
+    max-width: 100%;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px 4px  #663399;
+}
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+svg circle{
+    width:100%;
+    height:100%;
+    fill:none;
+    stroke: #ecf0f1;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke: #663399;
+    stroke-dashoffset: calc(440 - (440*20)/100);
+    stroke-dashoffset: 352;
+}
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke: #663399;
+    stroke-dashoffset: calc(440 - (440*25)/100);
+    stroke-dashoffset: 330;
+}
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke: #663399;
+    stroke-dashoffset: calc(440 - (440*45)/100);
+    stroke-dashoffset: 242;
+}
+.card:nth-child(4) svg circle:nth-child(2){
+    stroke: #663399;
+    stroke-dashoffset: calc(440 - (440*10)/100);
+    stroke-dashoffset: 396;
+}
+/* End language svg pesent */
+@media(max-width:1170px){
+    .contentCenter {
+        max-width: 49.33%;
+        flex: 0 0 49.33%;
+    }
+    .contentLeft {
+        flex: 0 0 22.33%;
+        max-width: 22%;
+    }
+    .contentLeft .wrapper {
+        width: 70%;
+        margin-left: auto;
+    }
+}
+@media(max-width:992px){
+    *{}
+
+    .using {
+        display: none!important;
+    }
+
+    .listToDo .addWork .Write-work {
+        width: 75%;
+    }
+
+    .contentLeft .wrapper .buttonToday
+    , .contentLeft .wrapper .buttonNextDay
+    , .buttonAddProject .Projects ._1project
+    , .buttonAddProject .Projects .writeProject {
+        background: #bdc3c7;
+    }
+
+    .btnClose {
+        opacity: 1!important;
+        visibility: visible!important;
+    }
+
+    .contentLeft .wrapper {
+        width: 100%;
+        /* height: 100%; */
+        background: #bdc3c7;
+        position: relative;
+    }
+
+    .contentLeft {
+        position: fixed;
+        top: 0;
+        right: -500px;
+        background: #bdc3c7;
+        z-index: 1030;
+        width: 100%;
+        height: 100%;
+        display: block;
+        transition: 0.4s;
+        opacity: 0;
+        visibility: hidden;
+        max-width: 77%;
+    }
+
+    .contentLeft.show {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .contentCenter {
+        max-width: 100%!important;
+        display: block;
+        margin: auto;
+    }
+    .header .parents .items .barMenu{
+        opacity:1;
+        visibility:visible;
+    }
+    .language .container{
+        display: block;
+    }
+    .listToDo{
+        width: 600px;
+    }
+}
+
+@media(max-width:576px){
+    *{}
+
+    .important p {
+        font-size: 13px;
+        top: 13px;
+    }
+
+    .levels .level {
+        width: 16px;
+    }
+
+    .parents .items .logout
+    , .parents .items .login
+    , .parents .items .signup {
+        width: 60px;
+    }
+
+    .addWork span {
+        font-size: 13px;
+    }
+
+    .listToDo .addWork .Write-work {
+        width: 70%;
+    }
+
+    .listToDo .addWork .button-add {
+        width: 100px;
+    }
+
+    button.btn.btn-info.button-add p {
+        font-size: 15px;
+    }
+
+    .header .parents .items .buttonAddWorkParent .form_add {
+        width: 375px;
+    }
+
+    .listToDo {
+        width: 375px!important;
+    }
+}
